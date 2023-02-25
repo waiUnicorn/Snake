@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Змейка в консольке</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style/style.css" />
+		<link rel="stylesheet" type="text/css" href="style/color.css" />
+		<script type="text/javascript" src="script/options.js"></script>
+		<script type="text/javascript" src="script/extra.js"></script>
+		<script type="text/javascript" src="script/staff.js" defer></script>
+		<script type="text/javascript" src="script/spirit.js" defer></script>
+		<script type="text/javascript" src="script/Main.js" defer></script>
+	</head>
+	<body>
+		<div style="position:relative;">
+		
+		<div class="tablo" id="main_menu">
+			<h1>Игра Змейка</h1>
+			<article>Выберите тип игры</article>
+			<p class="cell" val="classic">Классическая</p>
+			<p class="cell" val="stages">С уровнями</p>
+			<p class="cell" val="marathon">Марафон</p>
+			<p class="cell" val="stats">Рекорды</p>
+		</div>
+		<div class="tablo" id="pause_menu">
+			<h1>Пауза</h1>
+			<article>~~~~~</article>
+			<p class="cell" val="resume">Продолжить</p>
+			<p class="cell" val="stats">Рекорды</p>
+			<p class="cell" val="letsgame">Начать сначала</p>
+			<p class="cell" val="start">Главное меню</p>
+		</div>
+		<div class="tablo" id="fin">
+			<h1>Game Over</h1>
+			<article>~~~~~~~~~</article>
+			<p class="scoreart">Вы набрали</p>
+			<p class="scoreart finscore"></p>
+			<p class="scoreart">очков</p>
+			<p class="cell" val="ok">Главное меню</p>
+		</div>
+		<div class="tablo" id="winer">
+		<h1>Новый рекорд!</h1>
+		<article>~~~~~~~~~</article>
+		<p class="scoreart">Вы на <span id="scoreside"></span> месте</p>
+		<p class="scoreart">Вы набрали</p>
+		<p class="scoreart finscore"></p>
+		<p class="scoreart">очков</p>
+		<p class="cell" val="ok">ОК</p>
+		</div>
+		<div  id="stats">
+		<h1>Рекорды:</h1>
+		<article>~~~~~*~~~~~</article>
+		<div id="statjournal"></div>
+		<p class="cell" val="back">Назад</p>
+		<p class="cell" val="clear_storage">Очистить рекорды</p>
+		</div>
+		
+		<div id="gameArea"></div>
+		<div id="scorelist">
+		<p>score&nbsp;<span id="score"></span></p>
+		<p id="typegame"></p>
+		</div>
+		</div>
+		<script type="text/javascript" src="script/display.js"></script>
+		<div class="control">
+			<div class="c1">
+				<button id="esc">esc</button>
+				<button class="bup" id="up">&#9650;</button>
+				<button id="mute" onclick="if(this.textContent==='&#128263;'){this.textContent='&#128266;'}else{this.textContent='&#128263;'}">&#128266;</button>
+				<button id="ok">ок</button>
+			</div>
+			<div class="c2">
+				<button class="bup" id="left">&#9668;</button>
+				<button class="bup" id="right">&#9658;</button>
+			</div>
+			<div class="c3">
+				<button class="bup" id="down">&#9660;</button>
+			</div>
+		</div>
+	</body>
+</html>
